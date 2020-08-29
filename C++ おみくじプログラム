@@ -1,0 +1,32 @@
+#include <iostream>
+#include <time.h>
+using namespace std;
+
+
+
+int main() {
+
+	srand((int)time(0));
+
+
+	while (true) {
+		string num;
+		cout << "キーボードで何か入力して下さい\n";
+
+		cin >> num;
+
+		int cpu = rand() % 3;
+		cpu++;
+
+		switch (cpu) {
+		case 1: cout << "大吉\n"; break;
+		case 2: cout << "中吉\n"; break;
+		case 3: cout << "小吉\n"; break;
+		}
+
+
+
+	}
+
+	return 0;
+}
