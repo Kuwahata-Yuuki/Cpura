@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+struct Person {
+
+	int age;
+	double weight, height;
+
+};
+
+
+int main() {
+
+	Person p1;
+
+	cout << "年齢を入力してください\n";
+	cin >> p1.age;
+
+	cout << "体重を入力してください\n";
+	cin >> p1.weight;
+
+	cout << "身長を入力してください\n";
+	cin >> p1.height;
+
+	cout << "年齢は:" << p1.age << "体重は:" << p1.weight << "身長は:" << p1.height;
+
+
+
+	return 0;
+}
