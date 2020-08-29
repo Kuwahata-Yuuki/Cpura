@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+void add(int point, int* num) {
+
+	
+
+	*num += point;
+
+}
+
+int main() {
+
+	int num1, num2,point;
+
+	cout << "二科目分の点数を入力してください\n";
+
+	cin >> num1;
+	cin >> num2;
+
+	cout << "加算する点数を入力してください\n";
+	cin >> point;
+
+	add(point, &num1);
+	add(point, &num2);
+
+
+	cout << "結果は" << num1 << "\n";
+	cout << "結果は" << num2 << "\n";
+	
+	
+	return 0;
+}
