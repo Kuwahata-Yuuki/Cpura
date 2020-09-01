@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+
+	cout << "名前を入力してください\n";
+
+	string name;
+
+	cin >> name;
+
+
+	setlocale(LC_ALL, "");
+
+	const char* cstr = name.c_str();
+
+	cout << _mbstrlen(cstr);
+
+	return 0;
+}
