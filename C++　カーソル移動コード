@@ -1,0 +1,49 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+ 
+
+struct Ston {
+	const int BLACK = 1;
+	const int NONE = 0;
+	const int WHITE = 2;
+};
+
+
+int corsolX;
+int corsolY;
+
+int main() {
+
+	const int Fx = 8;
+	const int Fy = 8;
+
+	Ston s;
+
+	while (1) {
+		system("cls");
+		for (int y = 0; y < Fy; y++) {
+			for (int x = 0; x < Fx; x++) {
+				if (corsolY == y && corsolX == x) {
+					cout << "◎";
+				}
+				else {
+					cout << "・";
+				}
+			}
+			cout << "\n";
+		}
+
+		switch (_getch()) {
+		case 'w': corsolY--; break;
+		case 's': corsolY++; break;
+		case 'a': corsolX--; break;
+		case 'd': corsolX++; break;
+
+		}
+
+	}
+
+	return 0;
+}
