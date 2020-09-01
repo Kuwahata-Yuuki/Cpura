@@ -1,0 +1,74 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+ 
+
+
+	const int BLACK = 0;
+	const int NONE = -1;
+	const int WHITE = 1;
+
+
+
+int corsolX;
+int corsolY;
+
+int turn;
+
+int main() {
+
+	const int Fx = 8;
+	const int Fy = 8;
+
+	
+
+	int cell[Fy][Fx];
+
+	for (int y = 0; y < Fy; y++) {
+		for (int x = 0; x < Fx; x++) {
+			cell[y][x] = NONE;
+			cell[3][3] = cell[4][4] = WHITE;
+			cell[4][3] = cell[3][4] = BLACK;
+
+		}
+	}
+
+
+	while (1) {
+
+	
+
+		system("cls");
+		for (int y = 0; y < Fy; y++) {
+			for (int x = 0; x < Fx; x++) {
+				if (corsolY == y && corsolX == x) {
+					cout << "◎";
+				}
+				else {
+					switch (cell[y][x]) {
+					case NONE:	cout << "・"; break;
+					case BLACK: cout << "●"; break;
+					case WHITE: cout << "〇"; break;
+					}
+				}
+			}
+			cout << "\n";
+		}
+
+		switch (_getch()) {
+		case 'w': corsolY--; break;
+		case 's': corsolY++; break;
+		case 'a': corsolX--; break;
+		case 'd': corsolX++; break;
+		default:
+			
+			cell[corsolY][corsolX] = turn;
+			turn ^= 1;
+			break;
+		}
+
+	}
+
+	return 0;
+}
