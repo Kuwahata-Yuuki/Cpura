@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+
+	int num;
+
+	cin.exceptions(ios::failbit); //cinの例外処理を有効にする
+
+	cout << "数値を入力してください\n";
+	while (true) {
+		try {
+			cin >> num;
+		}
+		catch (...) {
+			cout << "数値を入力してください\n";
+
+			cin.clear(); //例外を消去。
+			cin.seekg(0);
+			continue;
+		}
+		break;
+	}
+
+	cout << "入力された数値は" << num << "です\n";
+	
+
+	return 0;
+}
