@@ -1,0 +1,18 @@
+#include <iostream>
+#define purasu num1+num2
+using namespace std;
+
+
+int main() {
+
+	int num1, num2;
+
+	cout << "整数を二つ入力してください\n";
+
+	cin >> num1 >> num2;
+
+	cout << "二つの数字を足すと" << purasu;
+	
+
+	return 0;
+}
